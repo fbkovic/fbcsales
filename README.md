@@ -11,13 +11,5 @@ Dieses Projekt ist eine Next.js-Anwendung mit API-Endpunkten und Basic-Auth-Schu
 ## Vercel Deployment
 
 - Vercel kann das Projekt direkt deployen.
-- Setze die Umgebungsvariablen `BASIC_AUTH_USER` und `BASIC_AUTH_PASS` in den Vercel-Projekt-Einstellungen.
-- Optional: Verwende Vercel Access Controls oder ein privates Git-Repository für zusätzlichen Schutz.
-
-## Sicherer Zugriff
-
-Die Datei `middleware.ts` schützt alle Seiten und API-Routen mit Basic Auth.
-
-### Beispiel
-
-Rufe `GET /api/hello` auf, nachdem du dich mit Benutzername und Passwort authentifiziert hast.
+- Das Projekt ist öffentlich erreichbar und benötigt keine Basic Auth.
+- Optional: Setze das Custom Domain `fbcsales.at` in den Vercel-Projekt-Einstellungen.
