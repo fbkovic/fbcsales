@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FBC Sales</title>
+  <meta name="description" content="FBC Sales - AI Software, IT-Staffing & Nearshoring aus einer Hand." />
+  <link rel="icon" type="image/png" href="/fbc-logo.png" />
+  <link rel="shortcut icon" href="/fbc-logo.png" />
+  <link rel="apple-touch-icon" href="/fbc-logo.png" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: #081124;
+      color: #f8fafc;
+      line-height: 1.55;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page { display: flex; flex-direction: column; min-height: 100vh; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; position: sticky; top: 0; background: rgba(8,17,36,0.92); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .brand { display: flex; align-items: center; gap: 0.85rem; }
+    .brand img { height: 42px; width: auto; display: block; }
+    .brand span { font-weight: 800; font-size: 1.05rem; letter-spacing: 0.04em; }
+    .nav-links { display: flex; gap: 1.4rem; font-size: 0.95rem; color: #94a3b8; }
+    .nav-links a:hover { color: #f8fafc; }
+    .hero { display: grid; place-items: center; padding: 5rem 2rem; flex: 1; }
+    .hero-inner { max-width: 860px; text-align: center; }
+    .hero-inner h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.02; margin-bottom: 1rem; }
+    .hero-inner p { max-width: 720px; margin: 0 auto 2rem; color: #cbd5e1; font-size: 1.05rem; }
+    .hero-buttons { display: inline-flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.95rem 1.8rem; border-radius: 999px; font-weight: 700; transition: transform 0.2s ease, background 0.2s ease; }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+    .btn-secondary { background: rgba(255,255,255,0.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.12); }
+    .btn-secondary:hover { background: rgba(255,255,255,0.14); transform: translateY(-1px); }
+    .features { padding: 3rem 2rem 4rem; background: #091523; }
+    .feature-grid { display: grid; gap: 1.25rem; max-width: 1100px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .feature-card { padding: 1.6rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.02); }
+    .feature-card h3 { margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .feature-card p { color: #cbd5e1; font-size: 0.95rem; }
+    footer { padding: 1.75rem 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); color: #94a3b8; font-size: 0.95rem; }
+    @media (max-width: 720px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="/">
+        <img src="/fbc-logo.png" alt="FBC Logo" />
+        <span>FBC Sales</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Leistungen</a>
+        <a href="#products">Produkte</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+    <main class="hero">
+      <div class="hero-inner">
+        <p style="margin-bottom:1rem;color:#60a5fa;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.85rem;">AI Software · IT Staffing · Nearshoring</p>
+        <h1>FBC Sales baut Ihre nächste KI-Lösung und liefert IT-Teams zum Fixpreis.</h1>
+        <p>Einfach, schnell und aus einer Hand: Produktentwicklung, IT-Personal und Nearshoring für Unternehmen in Österreich und DACH.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener">Termin buchen</a>
+          <a class="btn btn-secondary" href="#services">Mehr erfahren</a>
+        </div>
+      </div>
+    </main>
+    <section id="services" class="features">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>AI Software</h3>
+          <p>Wir entwickeln KI-Produkte, LLM-Integrationen und smarte Automatisierungen für Ihr Unternehmen.</p>
+        </div>
+        <div class="feature-card">
+          <h3>IT Staffing</h3>
+          <p>Prüfte Experten, dedizierte Teams und schnelle Besetzung für Ihre Entwickler- und Tech-Projekte.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Nearshoring</h3>
+          <p>Günstige, zuverlässige Teams aus Osteuropa mit DACH-orientierter Kommunikation und Management.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fixpreisprojekte</h3>
+          <p>Klare Angebote ohne versteckte Kosten, mit festem Scope und zuverlässiger Lieferung.</p>
+        </div>
+      </div>
+    </section>
+    <footer id="contact">
+      <p>FBC Sales · AI Software, IT Staffing und Nearshoring für den DACH-Markt.</p>
+      <p>Logo und Favicon verwenden jetzt <strong>fbc-logo.png</strong> aus diesem Workspace.</p>
+    </footer>
+  </div>
+</body>
+</html>
