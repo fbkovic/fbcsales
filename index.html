@@ -1,12 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FBC – AI Software, IT-Staffing & Nearshoring aus einer Hand</title>
   <meta name="description" content="FBC entwickelt KI-Software, vermittelt IT-Experten und liefert Fixpreisprojekte. Eigene Produkte: Estel, SEO AIgency, ClientKing. Jetzt Termin vereinbaren." />
-  <link rel="icon" type="image/png" sizes="64x64" href="fbc-logo.png" />
-  <link rel="shortcut icon" href="fbc-logo.png" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -43,7 +43,7 @@
       overflow-x: hidden;
     }
 
-    /* ÔöÇÔöÇ NAV ÔöÇÔöÇ */
+    /* -- NAV -- */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(10,22,40,0.92);
@@ -71,7 +71,7 @@
     }
     .nav-cta:hover { background: var(--blue-400); transform: translateY(-1px); }
 
-    /* ÔöÇÔöÇ HERO ÔöÇÔöÇ */
+    /* -- HERO -- */
     .hero {
       min-height: 100vh;
       display: flex; align-items: center; justify-content: center;
@@ -142,7 +142,7 @@
     .stat-num { font-size: 1.8rem; font-weight: 800; color: var(--text-primary); }
     .stat-label { font-size: .8rem; color: var(--text-secondary); font-weight: 500; margin-top: .2rem; }
 
-    /* ÔöÇÔöÇ SECTIONS ÔöÇÔöÇ */
+    /* -- SECTIONS -- */
     section { padding: 90px 2rem; }
     .container { max-width: 1160px; margin: 0 auto; }
     .section-label {
@@ -153,7 +153,7 @@
     h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; letter-spacing: -.025em; margin-bottom: 1rem; }
     .section-intro { color: var(--text-secondary); font-size: 1.1rem; max-width: 580px; margin-bottom: 3.5rem; }
 
-    /* ÔöÇÔöÇ SERVICES ÔöÇÔöÇ */
+    /* -- SERVICES -- */
     .services { background: var(--surface); }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
     .service-card {
@@ -180,7 +180,7 @@
     .service-features li { display: flex; align-items: flex-start; gap: .6rem; font-size: .875rem; color: var(--text-secondary); }
     .service-features li::before { content: '•'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: .05rem; }
 
-    /* ÔöÇÔöÇ PRODUCTS ÔöÇÔöÇ */
+    /* -- PRODUCTS -- */
     .products { background: var(--blue-900); }
     .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
     .product-card {
@@ -224,7 +224,7 @@
     .product-card.seo .product-link { color: #fcd34d; }
     .product-link:hover { gap: .8rem; }
 
-    /* ÔöÇÔöÇ WHY US ÔöÇÔöÇ */
+    /* -- WHY US -- */
     .why { background: var(--surface); }
     .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
@@ -247,7 +247,7 @@
     .bar-wrap { height: 6px; background: rgba(255,255,255,.07); border-radius: 999px; flex: 1; margin: 0 1rem; }
     .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--blue-500), var(--blue-400)); }
 
-    /* ÔöÇÔöÇ PROCESS ÔöÇÔöÇ */
+    /* -- PROCESS -- */
     .process { background: var(--blue-900); }
     .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; position: relative; }
     .step {
@@ -265,7 +265,7 @@
     .step h4 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
     .step p { font-size: .85rem; color: var(--text-secondary); line-height: 1.6; }
 
-    /* ÔöÇÔöÇ AUTOMATION IDEAS ÔöÇÔöÇ */
+    /* -- AUTOMATION IDEAS -- */
     .automation { background: var(--surface); }
     .auto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
     .auto-card {
@@ -286,7 +286,7 @@
 
 
 
-    /* ÔöÇÔöÇ BOOKING ÔöÇÔöÇ */
+    /* -- BOOKING -- */
     .booking {
       background: linear-gradient(135deg, var(--blue-800) 0%, var(--blue-900) 100%);
       border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
@@ -320,7 +320,7 @@
     }
     .btn-book:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(37,99,235,.55); }
 
-    /* ÔöÇÔöÇ SOCIAL PROOF ÔöÇÔöÇ */
+    /* -- SOCIAL PROOF -- */
     .social-proof { background: var(--surface); }
     .logos-bar {
       display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 2rem;
@@ -340,7 +340,7 @@
     .testimonial .author-role { font-size: .8rem; color: var(--text-secondary); margin-top: .2rem; }
     .stars { color: var(--accent); letter-spacing: .1em; font-size: .9rem; margin-bottom: .75rem; }
 
-    /* ÔöÇÔöÇ FOOTER ÔöÇÔöÇ */
+    /* -- FOOTER -- */
     footer {
       background: #070e1a; border-top: 1px solid var(--border);
       padding: 3rem 2rem;
@@ -361,7 +361,7 @@
     .footer-bottom { max-width: 1160px; margin: 1.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
     .footer-bottom p { font-size: .8rem; color: var(--text-secondary); }
 
-    /* ÔöÇÔöÇ MISC ÔöÇÔöÇ */
+    /* -- MISC -- */
     .gradient-text {
       background: linear-gradient(135deg, var(--blue-300), var(--accent));
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
@@ -416,7 +416,7 @@
     </p>
     <div class="hero-buttons">
       <a class="btn-primary" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener">
-        → Kostenloses Beratungsgesprüch
+        → Kostenloses Beratungsgespräch
       </a>
       <a class="btn-secondary" href="#products">
         Unsere Software entdecken →
@@ -463,7 +463,7 @@
           <li>Entwickler, Architekten, DevOps, QA</li>
           <li>Kurz- und Langzeitprojekte möglich</li>
           <li>Pre-Screening & Skills-Assessment inklusive</li>
-          <li>Verrechnung nach tatsüchlich geleisteten Stunden</li>
+          <li>Verrechnung nach tatsächlich geleisteten Stunden</li>
           <li>DACH-Markt – österreichisches Recht</li>
         </ul>
       </div>
@@ -471,7 +471,7 @@
       <div class="service-card">
         <div class="service-icon">✓</div>
         <h3>Nearshoring</h3>
-        <p>Hochqualifizierte Entwicklerteams aus Osteuropa und dem Balkan – bis zu 60% günstigere Kosten bei gleichbleibender Qualitüt.</p>
+        <p>Hochqualifizierte Entwicklerteams aus Osteuropa und dem Balkan – bis zu 60% günstigere Kosten bei gleichbleibender Qualität.</p>
         <ul class="service-features">
           <li>Dedizierte Teams nach Ihren Vorgaben</li>
           <li>Gleiche Zeitzone & Kultur</li>
@@ -490,7 +490,7 @@
           <li>Fixpreis-Garantie – kein Budget-Overrun</li>
           <li>Meilensteinbasierte Abrechnung</li>
           <li>Web, Mobile, Cloud, API-Integration</li>
-          <li>12 Monate Gewührleistung nach Abnahme</li>
+          <li>12 Monate Gewährleistung nach Abnahme</li>
         </ul>
       </div>
 
@@ -521,7 +521,7 @@
         <div style="display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap">
           <div style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:8px;padding:.5rem .9rem;font-size:.8rem;text-align:center">
             <div style="font-size:1.3rem;font-weight:800;color:#6ee7b7">4+ Std.</div>
-            <div style="color:var(--text-secondary)">tüglich gespart</div>
+            <div style="color:var(--text-secondary)">täglich gespart</div>
           </div>
           <div style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:8px;padding:.5rem .9rem;font-size:.8rem;text-align:center">
             <div style="font-size:1.3rem;font-weight:800;color:#6ee7b7">10.000+</div>
@@ -533,15 +533,15 @@
           </div>
         </div>
         <div class="product-features">
-          <div class="product-feature"><div class="feature-dot"></div><span>Demand Confidence Score – proprietürer Algorithmus filtert Top-Chancen</span></div>
-          <div class="product-feature"><div class="feature-dot"></div><span>Buyer Matching: direkte Verbindung zu Entscheidern mit Budget & Autoritüt</span></div>
+          <div class="product-feature"><div class="feature-dot"></div><span>Demand Confidence Score – proprietärer Algorithmus filtert Top-Chancen</span></div>
+          <div class="product-feature"><div class="feature-dot"></div><span>Buyer Matching: direkte Verbindung zu Entscheidern mit Budget & Autorität</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>Echtzeit-Marktintelligenz über Hiring-Trends & Unternehmensbedarfe</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>Automatisch generierte Company Briefs in Sekunden</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>Verifizierte Kontaktdaten – kein manuelles Recherchieren mehr</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>KI-personalisierte Outreach-Entwürfe pro Lead-Karte</span></div>
         </div>
         <div style="margin:1.25rem 0;padding:.875rem 1rem;background:rgba(16,185,129,.06);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:.82rem;color:var(--text-secondary);font-style:italic">
-          “Estel liefert uns alles, was wir für den Sales-Prozess brauchen, auf einer einzigen Lead-Karte."
+          "Estel liefert uns alles, was wir für den Sales-Prozess brauchen, auf einer einzigen Lead-Karte."
           <br/><strong style="color:#6ee7b7;font-style:normal">– Kerem Basak, Founder FBC</strong>
         </div>
         <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap">
@@ -563,7 +563,7 @@
         </p>
         <div style="display:flex;gap:1rem;margin-bottom:1.25rem;flex-wrap:wrap">
           <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:.5rem .9rem;font-size:.8rem;text-align:center">
-            <div style="font-size:1.3rem;font-weight:800;color:#fcd34d">12├ù</div>
+            <div style="font-size:1.3rem;font-weight:800;color:#fcd34d">12×</div>
             <div style="color:var(--text-secondary)">schnellere Inhalte</div>
           </div>
           <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:.5rem .9rem;font-size:.8rem;text-align:center">
@@ -600,13 +600,13 @@
         <div class="product-badge">✓ Repair-Software</div>
         <h3>ClientKing</h3>
         <p class="tagline">
-          Die cloudbasierte All-in-One-Lösung für Handy- und Elektronik-Reparaturgeschüfte.
+          Die cloudbasierte All-in-One-Lösung für Handy- und Elektronik-Reparaturgeschäfte.
           Von der Auftragserfassung bis zur Abrechnung – alles digital, alles vernetzt.
         </p>
         <div class="product-features">
           <div class="product-feature"><div class="feature-dot"></div><span>Kiosk-Selbsterfassung mit QR-Code & digitaler Unterschrift</span></div>
-          <div class="product-feature"><div class="feature-dot"></div><span>Reparaturmanagement & Gerüteschadenserfassung</span></div>
-          <div class="product-feature"><div class="feature-dot"></div><span>Kostenvoranschlüge mit digitalem Signatur-Workflow</span></div>
+          <div class="product-feature"><div class="feature-dot"></div><span>Reparaturmanagement & Geräteschadenserfassung</span></div>
+          <div class="product-feature"><div class="feature-dot"></div><span>Kostenvoranschläge mit digitalem Signatur-Workflow</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>Ersatzteilmanagement & Lagerverwaltung</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>Multi-Shop-Management & rollenbasierte Zugriffsrechte</span></div>
           <div class="product-feature"><div class="feature-dot"></div><span>Automatische Status-Benachrichtigungen per E-Mail & SMS</span></div>
@@ -672,7 +672,7 @@
         </p>
         <div class="why-list">
           <div class="why-item">
-            <div class="why-icon">ÔÜí</div>
+            <div class="why-icon">⚡</div>
             <div>
               <h4>Schnelle Besetzung & Skalierung</h4>
               <p>IT-Experten innerhalb von 48–72 Stunden vorgestellt. Nearshoring-Teams in 2 Wochen aufgebaut.</p>
@@ -682,7 +682,7 @@
             <div class="why-icon">✓</div>
             <div>
               <h4>Fixpreis-Sicherheit</h4>
-              <p>Budget-Overrun gibt es bei uns nicht. Klare Vertrüge, messbare Meilensteine, transparente Kommunikation.</p>
+              <p>Budget-Overrun gibt es bei uns nicht. Klare Verträge, messbare Meilensteine, transparente Kommunikation.</p>
             </div>
           </div>
           <div class="why-item">
@@ -719,7 +719,7 @@
           <span class="metric-val">100%</span>
         </div>
         <div class="metric-row">
-          <span class="metric-label">DSGVO-Konformitüt</span>
+          <span class="metric-label">DSGVO-Konformität</span>
           <div class="bar-wrap"><div class="bar-fill" style="width:100%"></div></div>
           <span class="metric-val">•</span>
         </div>
@@ -734,18 +734,18 @@
 <!-- PROCESS -->
 <section class="process" id="process">
   <div class="container">
-    <span class="section-label">So lüuft es ab</span>
+    <span class="section-label">So läuft es ab</span>
     <h2>Von der Anfrage zum Ergebnis – in 4 Schritten</h2>
-    <p class="section-intro">Kein langer Onboarding-Prozess. Wir starten schnell und liefern verlüsslich.</p>
+    <p class="section-intro">Kein langer Onboarding-Prozess. Wir starten schnell und liefern verlässlich.</p>
     <div class="process-steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h4>Kostenloses Gesprüch</h4>
-        <p>30-minütiger Discovery Call – wir verstehen Ihren Bedarf, klüren Budgetrahmen und Zeitplan.</p>
+        <h4>Kostenloses Gespräch</h4>
+        <p>30-minütiger Discovery Call – wir verstehen Ihren Bedarf, klären Budgetrahmen und Zeitplan.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <h4>Ma├ƒgeschneidertes Angebot</h4>
+        <h4>Maßgeschneidertes Angebot</h4>
         <p>Innerhalb von 24 Stunden erhalten Sie ein konkretes Angebot – klar kalkuliert, ohne versteckte Kosten.</p>
       </div>
       <div class="step">
@@ -756,7 +756,7 @@
       <div class="step">
         <div class="step-num">04</div>
         <h4>Lieferung & Support</h4>
-        <p>Regelmü├ƒige Updates, transparentes Reporting und kontinuierlicher Support wührend des gesamten Projekts.</p>
+        <p>Regelmäßige Updates, transparentes Reporting und kontinuierlicher Support während des gesamten Projekts.</p>
       </div>
     </div>
   </div>
@@ -768,7 +768,7 @@
     <span class="section-label">Automatisierung</span>
     <h2>Was Sie komplett automatisieren können</h2>
     <p class="section-intro">
-      Mit den richtigen Tools lüuft Ihr Vertrieb auch dann, wenn Sie schlafen.
+      Mit den richtigen Tools läuft Ihr Vertrieb auch dann, wenn Sie schlafen.
     </p>
     <div class="auto-grid">
       <div class="auto-card">
@@ -799,7 +799,7 @@
         <div class="auto-icon">✓</div>
         <div>
           <h4>Lead-Qualifizierung (AI)</h4>
-          <p>KI-Chatbot auf der Website qualifiziert Besucher, stellt Fragen und leitet hei├ƒe Leads direkt ans CRM weiter.</p>
+          <p>KI-Chatbot auf der Website qualifiziert Besucher, stellt Fragen und leitet heiße Leads direkt ans CRM weiter.</p>
           <div class="auto-tool">Tidio AI • Drift • ClientKing</div>
         </div>
       </div>
@@ -815,7 +815,7 @@
         <div class="auto-icon">✓</div>
         <div>
           <h4>CRM-Datenpflege</h4>
-          <p>Kontakte aus Apollo, LinkedIn und Formularen flie├ƒen automatisch ins CRM – kein manuelles Copy-Paste.</p>
+          <p>Kontakte aus Apollo, LinkedIn und Formularen fließen automatisch ins CRM – kein manuelles Copy-Paste.</p>
           <div class="auto-tool">Zapier • Make • ClientKing API</div>
         </div>
       </div>
@@ -845,7 +845,7 @@
     <span class="section-label">Termin buchen</span>
     <h2>Starten Sie jetzt – kostenlos &amp; unverbindlich</h2>
     <p>
-      Vereinbaren Sie Ihr persönliches 30-Minuten-Gesprüch direkt online.
+      Vereinbaren Sie Ihr persönliches 30-Minuten-Gespräch direkt online.
       Kein Telefontagebuch, keine Wartezeiten.
     </p>
     <div class="booking-card">
@@ -874,7 +874,7 @@
     <span class="section-label">Referenzen & Vertrauen</span>
     <h2>Unternehmen, die uns vertrauen</h2>
     <p class="section-intro" style="margin-bottom:1.5rem">
-      Ergünzen Sie hier Ihre Kundenlogos und Testimonials für maximale Glaubwürdigkeit.
+      Ergänzen Sie hier Ihre Kundenlogos und Testimonials für maximale Glaubwürdigkeit.
     </p>
     <div class="logos-bar">
       <div class="logo-pill">Kunde A</div>
@@ -885,28 +885,28 @@
     </div>
     <div class="testimonial-grid">
       <div class="testimonial">
-        <div class="stars">ÔÿàÔÿàÔÿàÔÿàÔÿà</div>
+        <div class="stars">★★★★★</div>
         <p class="quote">
-          “FBC hat uns innerhalb von 3 Tagen zwei erfahrene Senior-Entwickler vermittelt.
-          Die Qualitüt war hervorragend – wir haben das Nearshoring-Team seitdem verdoppelt."
+          "FBC hat uns innerhalb von 3 Tagen zwei erfahrene Senior-Entwickler vermittelt.
+          Die Qualität war hervorragend – wir haben das Nearshoring-Team seitdem verdoppelt."
         </p>
         <div class="author">Max Muster</div>
         <div class="author-role">CTO, Tech-Startup Wien</div>
       </div>
       <div class="testimonial">
-        <div class="stars">ÔÿàÔÿàÔÿàÔÿàÔÿà</div>
+        <div class="stars">★★★★★</div>
         <p class="quote">
-          “Das Fixpreisangebot war exakt eingehalten – kein Euro mehr. Endlich ein IT-Partner,
+          "Das Fixpreisangebot war exakt eingehalten – kein Euro mehr. Endlich ein IT-Partner,
           dem man Budget und Zeitplan anvertrauen kann."
         </p>
         <div class="author">Anna Beispiel</div>
-        <div class="author-role">Head of IT, Mittelstündisches Unternehmen</div>
+        <div class="author-role">Head of IT, Mittelständisches Unternehmen</div>
       </div>
       <div class="testimonial">
-        <div class="stars">ÔÿàÔÿàÔÿàÔÿàÔÿà</div>
+        <div class="stars">★★★★★</div>
         <p class="quote">
-          “SEO AIgency hat unsere organische Sichtbarkeit in 6 Monaten verdreifacht.
-          Die KI-Briefings sparen uns tüglich mehrere Stunden."
+          "SEO AIgency hat unsere organische Sichtbarkeit in 6 Monaten verdreifacht.
+          Die KI-Briefings sparen uns täglich mehrere Stunden."
         </p>
         <div class="author">Klaus Testmann</div>
         <div class="author-role">Marketing Manager, E-Commerce DACH</div>
@@ -955,4 +955,3 @@
 
 </body>
 </html>
-
