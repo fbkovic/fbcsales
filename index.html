@@ -726,6 +726,70 @@
     }
     .step p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
 
+    /* ====== CERTIFICATIONS ====== */
+    .certs { background: var(--night); color: var(--night-text); border-top: 1px solid var(--ink); }
+    .certs .mono { color: var(--night-muted); }
+    .certs .section-head .eyebrow::before { background: var(--accent); }
+    .certs h2.section-h { color: var(--night-text); }
+    .certs .section-intro { color: var(--night-muted); }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--night-rule);
+      border-top: 1px solid var(--night-rule);
+      border-bottom: 1px solid var(--night-rule);
+    }
+    @media (max-width: 820px) { .certs-grid { grid-template-columns: repeat(2, 1fr); } }
+    .cert-card {
+      background: var(--night);
+      padding: 1.75rem 1.5rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      transition: background .2s ease;
+    }
+    .cert-card:hover { background: var(--night-2); }
+    .cert-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem; color: var(--accent);
+      letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .cert-name {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: "opsz" 36, "SOFT" 30;
+      font-weight: 450;
+      font-size: 1.1rem;
+      color: var(--night-text);
+      letter-spacing: -0.01em;
+    }
+    .cert-desc {
+      font-size: 0.82rem; color: var(--night-muted); line-height: 1.55; margin-top: 0.25rem;
+    }
+    .staff-certs-row {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--night-rule);
+      display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; align-items: center;
+    }
+    .staff-cert-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem; color: var(--night-muted);
+      letter-spacing: 0.03em;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--night-rule);
+      border-radius: 999px;
+    }
+    .staff-cert-badge strong { color: var(--night-text); font-weight: 500; }
+    .llc-link {
+      margin-left: auto;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem; color: var(--night-muted);
+      letter-spacing: 0.03em;
+    }
+    .llc-link a { color: var(--accent); text-decoration: none; }
+    .llc-link a:hover { text-decoration: underline; }
+    @media (max-width: 720px) { .llc-link { margin-left: 0; } }
+
     /* ====== FAQ ====== */
     .faq { background: var(--paper-2); border-top: 1px solid var(--rule); }
     .faq-list {
@@ -963,6 +1027,7 @@
   <div class="nav-links">
     <a href="#services" title="Leistungen">Leistungen</a>
     <a href="#products" title="Software">Software</a>
+    <a href="#zertifizierungen" title="Zertifizierungen">Zertifizierungen</a>
     <a href="#process" title="Ablauf">Ablauf</a>
     <a href="#faq" title="FAQ">FAQ</a>
   </div>
@@ -979,12 +1044,12 @@
     </div>
 
     <h1 class="hero-h display">
-      Wir bauen KI-Software — und haben dabei <em>zwei eigene Produkte</em> entwickelt.
+      IT-Staffing, Recruiting & KI-Umsetzung — von der <em>Prozessanalyse bis zum Go-Live.</em>
     </h1>
 
     <div class="hero-bottom">
       <p class="hero-lede">
-        FBC macht IT-Staffing, KI-Entwicklung und Fixpreisprojekte. Seit 2016 in Wien. Nebenbei haben wir Estel und SEO AIgency gebaut — <strong>weil wir die Probleme kennen, die unsere Kunden haben.</strong>
+        FBC begleitet Unternehmen entlang des gesamten Software-Lebenszyklus — von Requirements Engineering über Softwareentwicklung und Test-Automatisierung bis hin zur KI-Transformation. Seit 2016. Zertifizierte Experten, <strong>erfolgreiche Projekte für BRZ, EVN, ORF, Wien Energie und mehr.</strong>
       </p>
       <div class="hero-cta">
         <div class="hero-buttons">
@@ -1053,16 +1118,16 @@
 
       <div class="svc-row">
         <div class="svc-num">02</div>
-        <h3 class="svc-title">IT-Staffing</h3>
+        <h3 class="svc-title">IT-Staffing & <em>Recruiting</em></h3>
         <div class="svc-body">
-          <p>Geprüfte IT-Spezialisten on demand — flexibel, sofort einsatzbereit, im DACH-Recht abgesichert.</p>
+          <p>Zertifizierte IT-Spezialisten entlang des gesamten Software-Lebenszyklus — von der Prozessanalyse und Requirements Engineering bis zur Test-Automatisierung und Go-Live. Alle Fachkräfte sind zertifiziert und sofort einsatzbereit.</p>
           <ul class="svc-features">
-            <li>Entwickler, Architekten, DevOps, QA</li>
-            <li>Kurz- und Langzeitprojekte</li>
+            <li>Project Manager (PMO, Senior &amp; Junior) — IPMA-zertifiziert</li>
+            <li>Requirements Engineer &amp; Business Analyst — IREB &amp; BCS-zertifiziert</li>
+            <li>Software Developer — Java, C#, Angular, React, Spring Boot, Oracle</li>
+            <li>QA &amp; Test Automation — ISTQB-zertifiziert, Selenium, Appium, JMeter</li>
             <li>Pre-Screening &amp; Skills-Assessment inklusive</li>
-            <li>Verrechnung nach geleisteten Stunden</li>
-            <li>Österreichisches Recht, klare Verträge</li>
-            <li>Time-to-fill: 48–72 Stunden</li>
+            <li>Time-to-fill: 48–72 Stunden · Österreichisches Recht</li>
           </ul>
         </div>
       </div>
@@ -1095,6 +1160,22 @@
             <li>Web, Mobile, Cloud, API-Integration</li>
             <li>12 Monate Gewährleistung nach Abnahme</li>
             <li>Angebot innerhalb von 24 Stunden</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="svc-row">
+        <div class="svc-num">05</div>
+        <h3 class="svc-title">AI <em>Transformation</em></h3>
+        <div class="svc-body">
+          <p>Von der Prozessanalyse und AI-Readiness bis zur produktiven Implementierung — wir begleiten Unternehmen bei der gesamten KI-Transformation, DSGVO-konform und auf Basis bewährter ISO/IEC 42001-Prozesse.</p>
+          <ul class="svc-features">
+            <li>Prozessanalyse &amp; AI-Readiness-Assessment</li>
+            <li>Datenmigration &amp; Datenaufbereitung für KI-Systeme</li>
+            <li>Workflow-Automatisierung mit AI-Agenten</li>
+            <li>MCP Server Integration &amp; AI-Orchestrierung</li>
+            <li>AI-Broker-Selektion (OpenAI, Anthropic, Mistral, lokal)</li>
+            <li>End-to-End-Test &amp; Qualitätssicherung für AI-Systeme</li>
           </ul>
         </div>
       </div>
@@ -1233,15 +1314,15 @@
           <div class="why-item">
             <div class="why-mark">iii.</div>
             <div>
-              <h4>Eigene Software = Deep Know-how</h4>
-              <p>Wer selbst Software baut, versteht Ihren Bedarf auf einer anderen Ebene als ein reines Personalunternehmen.</p>
+              <h4>Zertifizierte Experten — nicht nur auf dem Papier</h4>
+              <p>Alle Fachkräfte sind ISTQB-, IPMA-, IREB- oder BCS-zertifiziert. Als Unternehmen sind wir nach ISO 9001, ISO 14001, ISO/IEC 42001 und ISO/IEC 27001 zertifiziert.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-mark">iv.</div>
             <div>
-              <h4>Ein Ansprechpartner — alles aus einer Hand</h4>
-              <p>Staffing, Nearshoring, Entwicklung und Software. Kein Vendor-Chaos, ein persönlicher Kontakt.</p>
+              <h4>Bewährte Track-Record — vor und nach KI</h4>
+              <p>Erfolgreiche Projekte für BRZ, EVN, Wien Energie, ORF und öffentlichen Sektor — lange bevor KI zum Thema wurde. Dieser Erfahrungsvorsprung ist unser Fundament für AI-Transformation.</p>
             </div>
           </div>
         </div>
@@ -1311,6 +1392,51 @@
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section class="certs" id="zertifizierungen">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="mono eyebrow">Zertifizierungen &amp; Qualität</div>
+        <h2 class="section-h display">Zertifiziert. <em>Geprüft. Verlässlich.</em></h2>
+      </div>
+      <p class="section-intro">
+        Als Unternehmen und als Team. Alle Zertifizierungen sind extern auditiert durch <a href="https://ll-c.de" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">LL-C (Certification) Germany GmbH</a> — akkreditierter ISO-Zertifizierer mit Sitz in München.
+      </p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-label">Qualitätsmanagement</div>
+        <div class="cert-name">ISO 9001:2015</div>
+        <div class="cert-desc">Geprüfte Prozesse und messbare Qualität in allen Leistungsbereichen</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-label">Umweltmanagement</div>
+        <div class="cert-name">ISO 14001</div>
+        <div class="cert-desc">Nachhaltiges und umweltbewusstes Wirtschaften</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-label">AI Management System</div>
+        <div class="cert-name">ISO/IEC 42001</div>
+        <div class="cert-desc">Verantwortungsvoller, DSGVO-konformer KI-Einsatz nach internationalem Standard</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-label">Informationssicherheit</div>
+        <div class="cert-name">ISO/IEC 27001</div>
+        <div class="cert-desc">Geschützte Systeme und sichere Datenverarbeitung für alle Projekte</div>
+      </div>
+    </div>
+    <div class="staff-certs-row">
+      <span class="staff-cert-badge"><strong>ISTQB</strong> Software Testing</span>
+      <span class="staff-cert-badge"><strong>IPMA Level C &amp; D</strong> Projektmanagement</span>
+      <span class="staff-cert-badge"><strong>IREB</strong> Requirements Engineering</span>
+      <span class="staff-cert-badge"><strong>BCS</strong> Business Analysis</span>
+      <span class="staff-cert-badge"><strong>ISO/IEC 27001</strong> Information Security Auditor</span>
+      <div class="llc-link">Zertifiziert durch <a href="https://ll-c.de" target="_blank" rel="noopener">LL-C (Certification) Germany ↗</a></div>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq" id="faq" itemscope itemtype="https://schema.org/FAQPage">
   <div class="container">
@@ -1331,7 +1457,7 @@
           <span class="faq-toggle" aria-hidden="true">+</span>
         </button>
         <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p itemprop="text">FBC ist ein AI-first Softwareunternehmen aus Wien mit vier Kernleistungen: <strong>KI-Softwareentwicklung</strong>, <strong>IT-Staffing</strong> (IT-Experten innerhalb 48–72 h), <strong>Nearshoring</strong> (Teams aus Osteuropa, bis 60 % günstiger) und <strong>Fixpreisprojekte</strong> (100 % Fixpreis-Garantie). Was uns einzigartig macht: Wir bauen selbst Software — Estel, SEO AIgency und ClientKing — und verstehen Ihren Bedarf daher auf einer anderen Ebene als reine Personalunternehmen.</p>
+          <p itemprop="text">FBC ist ein AI-first Softwareunternehmen aus Wien mit vier Kernleistungen: <strong>KI-Softwareentwicklung</strong>, <strong>IT-Staffing</strong> (IT-Experten innerhalb 48–72 h), <strong>Nearshoring</strong> (Teams aus Osteuropa, bis 60 % günstiger) und <strong>Fixpreisprojekte</strong> (100 % Fixpreis-Garantie). Was uns einzigartig macht: Wir bauen selbst Software (Estel, SEO AIgency), begleiten Projekte von der Prozessanalyse bis zum End-to-End-Test, und sind nach ISO 9001, ISO/IEC 42001 und ISO/IEC 27001 zertifiziert. Das macht uns zu mehr als einem reinen Personalunternehmen.</p>
         </div>
       </div>
 
@@ -1404,13 +1530,20 @@
     </div>
 
     <div class="logos-bar">
-      <span class="logo-name">Ausgewählte Referenzen —</span>
-      <span class="logo-name">DACH</span>
-      <span class="logo-name">Mittelstand</span>
-      <span class="logo-name">Startups</span>
-      <span class="logo-name">Agenturen</span>
+      <span class="logo-name">Bundesrechenzentrum</span>
+      <span class="logo-name">EVN</span>
+      <span class="logo-name">Wien Energie</span>
+      <span class="logo-name">ÖBB</span>
+      <span class="logo-name">ORF</span>
+      <span class="logo-name">Österr. Post</span>
+      <span class="logo-name">Zürich Versicherung</span>
+      <span class="logo-name">Stadt Wien</span>
+      <span class="logo-name">PVA</span>
+      <span class="logo-name">APG</span>
+      <span class="logo-name">AMS</span>
+      <span class="logo-name">Re/MAX</span>
     </div>
-    <p class="logos-note">Namen nennen wir auf Anfrage — nicht ohne Erlaubnis.</p>
+    <p class="logos-note">BBG-Rahmenvertragspartner · Öffentlicher Sektor · Energie · Versicherung · Infrastruktur — seit 2016.</p>
   </div>
 </section>
 
