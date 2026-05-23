@@ -964,7 +964,7 @@
       letter-spacing: 0.03em;
     }
 
-    /* ====== BOOKING – CAL.COM LEAD SECTION ====== */
+    /* ====== BOOKING – CALENDAR WIDGET ====== */
     .fbc-cal-header { text-align: center; margin-bottom: 3rem; }
     .fbc-cal-title {
       color: var(--night-text);
@@ -1025,23 +1025,104 @@
       font-size: 0.75rem; color: var(--night-muted);
       padding-left: 1rem; display: block;
     }
-    .fbc-cal-embed-wrap {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--night-rule);
-      border-radius: 12px; padding: 8px;
-      min-height: 560px; overflow: hidden;
+
+    /* --- Calendar widget card --- */
+    .fbc-widget {
+      background: var(--paper);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.22);
     }
-    #fbc-cal-embed { width: 100%; height: 100%; min-height: 540px; }
-    .fbc-cal-placeholder {
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      min-height: 540px; text-align: center; padding: 2rem;
+    .fbc-widget-head {
+      background: var(--ink);
+      padding: 1.1rem 1.4rem;
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .fbc-cal-placeholder p {
+    .fbc-widget-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--night-muted);
+      margin-bottom: 3px;
+    }
+    .fbc-widget-month {
       font-family: 'Fraunces', serif;
-      font-size: 1.05rem; color: var(--night-muted);
-      margin-bottom: 1.5rem; line-height: 1.55;
+      font-size: 1.05rem; color: var(--night-text); font-weight: 500;
     }
+    .fbc-widget-nav { display: flex; gap: 6px; }
+    .fbc-widget-nav button {
+      background: rgba(255,255,255,0.1); border: none; cursor: pointer;
+      color: var(--night-text); width: 32px; height: 32px;
+      border-radius: 8px; font-size: 1rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .15s;
+    }
+    .fbc-widget-nav button:hover { background: var(--accent); }
+    .fbc-widget-body { padding: 1.1rem 1.25rem; }
+    .fbc-widget-wd {
+      display: grid; grid-template-columns: repeat(7,1fr);
+      margin-bottom: 6px;
+    }
+    .fbc-widget-wd span {
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--muted);
+      padding: 4px 0;
+    }
+    .fbc-widget-wd span.we { color: var(--muted-2); }
+    .fbc-widget-days { display: grid; grid-template-columns: repeat(7,1fr); gap: 3px; }
+    .fbc-day {
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 8px; font-size: 0.85rem; font-weight: 500;
+      transition: background .12s, color .12s, transform .1s;
+      cursor: default; color: var(--muted-2);
+    }
+    .fbc-day.avail {
+      background: var(--accent-soft); color: var(--ink);
+      cursor: pointer; font-weight: 600;
+    }
+    .fbc-day.avail:hover { background: var(--accent); color: #fff; transform: scale(1.1); }
+    .fbc-day.avail.selected { background: var(--accent); color: #fff; }
+    .fbc-day.today { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .fbc-widget-panel {
+      margin: 0.75rem 1.25rem 0; padding: 1rem 1.1rem;
+      background: var(--accent-soft); border-radius: 10px;
+      display: none; align-items: center; justify-content: space-between; gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .fbc-widget-panel.show { display: flex; }
+    .fbc-panel-date {
+      font-family: 'Fraunces', serif;
+      font-size: 0.95rem; color: var(--ink); font-weight: 500;
+    }
+    .fbc-panel-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--accent); color: #fff;
+      padding: 0.65rem 1.2rem; border-radius: 999px;
+      font-weight: 600; font-size: 0.88rem;
+      text-decoration: none; white-space: nowrap;
+      transition: background .15s;
+    }
+    .fbc-panel-btn:hover { background: var(--accent-hover); }
+    .fbc-widget-foot {
+      padding: 0.8rem 1.25rem 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid var(--rule); margin-top: 0.75rem;
+    }
+    .fbc-widget-legend { display: flex; gap: 1rem; }
+    .fbc-legend-item { display: flex; align-items: center; gap: 5px;
+      font-size: 0.7rem; color: var(--muted); }
+    .fbc-legend-dot { width: 10px; height: 10px; border-radius: 3px; }
+    .fbc-legend-dot.a { background: var(--accent); }
+    .fbc-legend-dot.n { background: var(--paper-3); border: 1px solid var(--rule); }
+    .fbc-widget-gcal-link {
+      font-size: 0.72rem; color: var(--muted);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 4px;
+      transition: color .15s;
+    }
+    .fbc-widget-gcal-link:hover { color: var(--accent); }
 
     /* ====== FOOTER ====== */
     footer {
@@ -1705,16 +1786,58 @@
         </div>
       </div>
 
-      <!-- RECHTS: CAL.COM INLINE EMBED -->
-      <div class="fbc-cal-embed-wrap">
-        <!-- Cal.com Embed — wird aktiv sobald calLink gesetzt ist (siehe Script unten) -->
-        <div id="fbc-cal-embed" style="display:none"></div>
-        <!-- Platzhalter bis Cal.com eingerichtet ist -->
-        <div class="fbc-cal-placeholder" id="fbc-cal-placeholder">
-          <p>Inline-Kalender folgt nach<br>Cal.com-Einrichtung.</p>
-          <a class="btn-book" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener" title="Termin via Google Calendar buchen">
-            Via Google Calendar buchen <span class="arr">→</span>
-          </a>
+      <!-- RECHTS: CUSTOM CALENDAR WIDGET -->
+      <div>
+        <div class="fbc-widget">
+          <!-- Header: Monat + Navigation -->
+          <div class="fbc-widget-head">
+            <div>
+              <div class="fbc-widget-eyebrow">Erstgespräch · 30 Min · kostenlos</div>
+              <div class="fbc-widget-month" id="fbc-month-label">Mai 2026</div>
+            </div>
+            <div class="fbc-widget-nav">
+              <button id="fbc-prev" aria-label="Vorheriger Monat">&#8249;</button>
+              <button id="fbc-next" aria-label="Nächster Monat">&#8250;</button>
+            </div>
+          </div>
+
+          <!-- Wochentag-Header -->
+          <div class="fbc-widget-body">
+            <div class="fbc-widget-wd">
+              <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span>
+              <span class="we">Sa</span><span class="we">So</span>
+            </div>
+            <!-- Tage werden per JS befüllt -->
+            <div class="fbc-widget-days" id="fbc-days"></div>
+          </div>
+
+          <!-- Auswahl-Panel: erscheint nach Klick auf einen Tag -->
+          <div class="fbc-widget-panel" id="fbc-panel">
+            <div class="fbc-panel-date" id="fbc-panel-date">Tag auswählen</div>
+            <a class="fbc-panel-btn" id="fbc-panel-btn"
+               href="https://calendar.app.google/diDrZSR46RfhnmPN9"
+               target="_blank" rel="noopener">
+              Jetzt buchen →
+            </a>
+          </div>
+
+          <!-- Footer: Legende + Link -->
+          <div class="fbc-widget-foot">
+            <div class="fbc-widget-legend">
+              <div class="fbc-legend-item">
+                <div class="fbc-legend-dot a"></div><span>Verfügbar</span>
+              </div>
+              <div class="fbc-legend-item">
+                <div class="fbc-legend-dot n"></div><span>Nicht buchbar</span>
+              </div>
+            </div>
+            <a class="fbc-widget-gcal-link"
+               href="https://calendar.app.google/diDrZSR46RfhnmPN9"
+               target="_blank" rel="noopener">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Alle Zeiten in Google Calendar
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1782,18 +1905,88 @@
   });
 </script>
 
+<script>
+(function () {
+  var BOOKING_URL = 'https://calendar.app.google/diDrZSR46RfhnmPN9';
+  var MONTHS = ['Jänner','Februar','März','April','Mai','Juni',
+                'Juli','August','September','Oktober','November','Dezember'];
+
+  var today = new Date(); today.setHours(0,0,0,0);
+  var cur = new Date(today.getFullYear(), today.getMonth(), 1);
+
+  function render() {
+    var y = cur.getFullYear(), m = cur.getMonth();
+    document.getElementById('fbc-month-label').textContent = MONTHS[m] + ' ' + y;
+
+    var firstDow = new Date(y, m, 1).getDay(); // 0=Sun
+    var startOffset = (firstDow === 0) ? 6 : firstDow - 1; // Monday-first
+    var daysInMonth = new Date(y, m + 1, 0).getDate();
+    var container = document.getElementById('fbc-days');
+    container.innerHTML = '';
+
+    for (var i = 0; i < startOffset; i++) {
+      var blank = document.createElement('div');
+      blank.className = 'fbc-day';
+      container.appendChild(blank);
+    }
+
+    for (var d = 1; d <= daysInMonth; d++) {
+      var date = new Date(y, m, d);
+      var dow = date.getDay();
+      var isWeekend = (dow === 0 || dow === 6);
+      var isPast = date < today;
+      var isToday = date.getTime() === today.getTime();
+
+      var el = document.createElement('div');
+      el.textContent = d;
+      el.className = 'fbc-day';
+
+      if (!isPast && !isWeekend) {
+        el.classList.add('avail');
+        (function (el, date, d, m, y) {
+          el.addEventListener('click', function () {
+            document.querySelectorAll('.fbc-day.selected')
+              .forEach(function (x) { x.classList.remove('selected'); });
+            el.classList.add('selected');
+
+            var label = d + '. ' + MONTHS[m] + ' ' + y;
+            document.getElementById('fbc-panel-date').textContent = label + ' — Termin buchen';
+            var panel = document.getElementById('fbc-panel');
+            panel.classList.add('show');
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          });
+        })(el, date, d, m, y);
+      }
+
+      if (isToday) el.classList.add('today');
+      container.appendChild(el);
+    }
+
+    var panel = document.getElementById('fbc-panel');
+    panel.classList.remove('show');
+    document.querySelectorAll('.fbc-day.selected')
+      .forEach(function (x) { x.classList.remove('selected'); });
+  }
+
+  document.getElementById('fbc-prev').addEventListener('click', function () {
+    cur.setMonth(cur.getMonth() - 1);
+    if (cur < new Date(today.getFullYear(), today.getMonth(), 1)) {
+      cur = new Date(today.getFullYear(), today.getMonth(), 1);
+    }
+    render();
+  });
+  document.getElementById('fbc-next').addEventListener('click', function () {
+    cur.setMonth(cur.getMonth() + 1);
+    render();
+  });
+
+  render();
+})();
+</script>
+
 <!--
   ============================================================
-  CAL.COM INLINE EMBED — aktivieren nach Anmeldung auf cal.com
-  ============================================================
-  Schritt 1: Cal.com Account anlegen unter https://cal.com
-  Schritt 2: Event Type "Erstgespräch" (30 min) erstellen
-  Schritt 3: Unten "calLink" anpassen (z.B. "kerembasak/erstgespraech")
-  Schritt 4: Diesen Block auskommentieren → aktivieren:
-             d.h. <!-- entfernen und das abschließende - - > entfernen
-  Schritt 5: Im HTML oben:
-             - <div id="fbc-cal-embed" style="display:none">  → style="display:block" setzen
-             - <div id="fbc-cal-placeholder" ...>              → mit style="display:none" ausblenden
+  CAL.COM INLINE EMBED — optional, falls du später Cal.com nutzt
   ============================================================
 
 <script type="text/javascript">
