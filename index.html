@@ -964,6 +964,85 @@
       letter-spacing: 0.03em;
     }
 
+    /* ====== BOOKING – CAL.COM LEAD SECTION ====== */
+    .fbc-cal-header { text-align: center; margin-bottom: 3rem; }
+    .fbc-cal-title {
+      color: var(--night-text);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      max-width: 24ch; margin: 0.75rem auto 1rem;
+    }
+    .fbc-cal-title em { color: var(--accent); }
+    .fbc-cal-sub {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: "opsz" 36, "SOFT" 50;
+      font-weight: 350;
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      color: var(--night-muted); max-width: 58ch;
+      margin: 0 auto; line-height: 1.55;
+    }
+    .fbc-cal-grid {
+      display: grid; grid-template-columns: 1fr 1.15fr;
+      gap: 3rem; align-items: start;
+    }
+    @media (max-width: 860px) { .fbc-cal-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .fbc-cal-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--night-muted);
+      margin: 0 0 1rem; font-weight: 600;
+    }
+    .fbc-cal-list { list-style: none; padding: 0; margin: 0 0 2.5rem; }
+    .fbc-cal-list li {
+      display: flex; gap: 0.9rem;
+      padding: 0.85rem 0; border-bottom: 1px solid var(--night-rule);
+      font-size: 0.93rem; color: var(--night-text); line-height: 1.5;
+    }
+    .fbc-cal-list li:last-child { border-bottom: 0; }
+    .fbc-cal-list strong { color: var(--night-text); font-weight: 600; }
+    .fbc-cal-check {
+      flex-shrink: 0; width: 22px; height: 22px;
+      border-radius: 50%; background: var(--accent); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; margin-top: 1px;
+    }
+    .fbc-cal-trust { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 2rem; }
+    .fbc-cal-trust span {
+      font-size: 0.75rem; color: var(--night-muted);
+      background: rgba(255,255,255,0.06); border: 1px solid var(--night-rule);
+      padding: 3px 10px; border-radius: 6px;
+      font-weight: 500; letter-spacing: 0.02em;
+    }
+    .fbc-cal-quote {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: "opsz" 36, "SOFT" 50;
+      font-weight: 350; font-size: 0.95rem;
+      color: var(--night-text);
+      border-left: 2px solid var(--accent);
+      padding: 0.5rem 1rem;
+      margin: 0 0 0.5rem; line-height: 1.55;
+    }
+    .fbc-cal-quote-author {
+      font-size: 0.75rem; color: var(--night-muted);
+      padding-left: 1rem; display: block;
+    }
+    .fbc-cal-embed-wrap {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--night-rule);
+      border-radius: 12px; padding: 8px;
+      min-height: 560px; overflow: hidden;
+    }
+    #fbc-cal-embed { width: 100%; height: 100%; min-height: 540px; }
+    .fbc-cal-placeholder {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 540px; text-align: center; padding: 2rem;
+    }
+    .fbc-cal-placeholder p {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem; color: var(--night-muted);
+      margin-bottom: 1.5rem; line-height: 1.55;
+    }
+
     /* ====== FOOTER ====== */
     footer {
       background: var(--ink);
@@ -1564,29 +1643,81 @@
   </div>
 </section>
 
-<!-- BOOKING / CTA -->
+<!-- BOOKING / CAL.COM TERMIN -->
 <section class="booking" id="booking">
   <div class="container">
-    <div class="booking-inner">
-      <div class="mono eyebrow" style="display:flex;align-items:center;gap:0.6rem">
+
+    <!-- HEADER -->
+    <div class="fbc-cal-header">
+      <div class="mono eyebrow" style="display:flex;align-items:center;justify-content:center;gap:0.6rem;color:var(--night-muted);margin-bottom:1rem">
         <span style="display:inline-block;width:24px;height:1px;background:var(--accent)"></span>
-        Termin buchen
+        Erstgespräch kostenlos &middot; 30 Min
       </div>
-      <h2 class="section-h display">Kein Pitch. Nur ein Gespräch — <em>30 Minuten reichen.</em></h2>
-      <p class="booking-lede">
-        Buchen Sie direkt einen Termin. Wenn wir helfen können, sagen wir Ihnen wie — wenn nicht, sagen wir das auch.
-      </p>
+      <h2 class="section-h display fbc-cal-title">In 14 Tagen das passende IT-Profil — <em>garantiert.</em></h2>
+      <p class="fbc-cal-sub">Buche ein 30-Minuten-Gespräch mit Kerem Basak. Innerhalb von 48&nbsp;Stunden nach dem Call erhältst du drei kuratierte Profile — KV-IT-konform und referenzgeprüft.</p>
+    </div>
 
-      <p style="font-size:0.95rem;color:var(--night-muted);line-height:1.75;max-width:54ch">
-        Das Gespräch dauert 30 Minuten, kostet nichts und verpflichtet zu gar nichts — außer zu einer ehrlichen Antwort unsererseits. Video oder Telefon, nach Ihrem Kalender.
-      </p>
+    <!-- GRID -->
+    <div class="fbc-cal-grid">
 
-      <div class="booking-actions">
-        <a class="btn-book" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener" title="Kostenloses 30-Minuten-Gespräch mit FBC direkt online buchen">
-          Termin direkt buchen <span class="arr">→</span>
-        </a>
-        <span class="booking-quiet">— oder schreiben Sie an <a href="mailto:fbk@fb-c.at" style="color:inherit;text-decoration:underline;text-underline-offset:3px">fbk@fb-c.at</a></span>
+      <!-- LINKS: ARGUMENTE -->
+      <div>
+        <p class="fbc-cal-label">Was du bekommst</p>
+        <ul class="fbc-cal-list">
+          <li>
+            <span class="fbc-cal-check">✓</span>
+            <div><strong>3 kuratierte Profile</strong> innerhalb 48&nbsp;Stunden nach dem Call</div>
+          </li>
+          <li>
+            <span class="fbc-cal-check">✓</span>
+            <div><strong>KV-IT konform</strong> — Stundensätze transparent kalkuliert</div>
+          </li>
+          <li>
+            <span class="fbc-cal-check">✓</span>
+            <div><strong>ISO 9001, 14001 &amp; 42001</strong> zertifizierter Auswahlprozess</div>
+          </li>
+          <li>
+            <span class="fbc-cal-check">✓</span>
+            <div><strong>Rahmenvereinbarungen</strong> mit EVN, BRZ, ÖBB, Post AG &amp; weiteren</div>
+          </li>
+          <li>
+            <span class="fbc-cal-check">✓</span>
+            <div><strong>Keine Verpflichtung</strong> — ehrliche Einschätzung, ob wir helfen können</div>
+          </li>
+        </ul>
+
+        <p class="fbc-cal-label">Kunden vertrauen unseren Profilen</p>
+        <div class="fbc-cal-trust">
+          <span>BRZ</span><span>EVN</span><span>ÖBB</span><span>Wien Energie</span>
+          <span>ORF</span><span>Post AG</span><span>Stadt Wien</span><span>PVA</span>
+        </div>
+
+        <blockquote class="fbc-cal-quote">
+          &ldquo;Die Tester von FBC haben unsere Release-Zyklen um 30&nbsp;% verkürzt. Kerem versteht regulierte Umgebungen.&rdquo;
+        </blockquote>
+        <span class="fbc-cal-quote-author">— IT-Lead, österreichischer Infrastrukturkonzern</span>
+
+        <div class="booking-actions" style="margin-top:2rem">
+          <a class="btn-book" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener" title="Kostenloses 30-Minuten-Gespräch mit FBC buchen">
+            Termin direkt buchen <span class="arr">→</span>
+          </a>
+          <span class="booking-quiet">oder schreiben an <a href="mailto:fbk@fb-c.at" style="color:inherit;text-decoration:underline;text-underline-offset:3px">fbk@fb-c.at</a></span>
+        </div>
       </div>
+
+      <!-- RECHTS: CAL.COM INLINE EMBED -->
+      <div class="fbc-cal-embed-wrap">
+        <!-- Cal.com Embed — wird aktiv sobald calLink gesetzt ist (siehe Script unten) -->
+        <div id="fbc-cal-embed" style="display:none"></div>
+        <!-- Platzhalter bis Cal.com eingerichtet ist -->
+        <div class="fbc-cal-placeholder" id="fbc-cal-placeholder">
+          <p>Inline-Kalender folgt nach<br>Cal.com-Einrichtung.</p>
+          <a class="btn-book" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener" title="Termin via Google Calendar buchen">
+            Via Google Calendar buchen <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1650,5 +1781,70 @@
     });
   });
 </script>
+
+<!--
+  ============================================================
+  CAL.COM INLINE EMBED — aktivieren nach Anmeldung auf cal.com
+  ============================================================
+  Schritt 1: Cal.com Account anlegen unter https://cal.com
+  Schritt 2: Event Type "Erstgespräch" (30 min) erstellen
+  Schritt 3: Unten "calLink" anpassen (z.B. "kerembasak/erstgespraech")
+  Schritt 4: Diesen Block auskommentieren → aktivieren:
+             d.h. <!-- entfernen und das abschließende - - > entfernen
+  Schritt 5: Im HTML oben:
+             - <div id="fbc-cal-embed" style="display:none">  → style="display:block" setzen
+             - <div id="fbc-cal-placeholder" ...>              → mit style="display:none" ausblenden
+  ============================================================
+
+<script type="text/javascript">
+(function (C, A, L) {
+  let p = function (a, ar) { a.q.push(ar); };
+  let d = C.document;
+  C.Cal = C.Cal || function () {
+    let cal = C.Cal; let ar = arguments;
+    if (!cal.loaded) {
+      cal.ns = {}; cal.q = cal.q || [];
+      d.head.appendChild(d.createElement("script")).src = A;
+      cal.loaded = true;
+    }
+    if (ar[0] === L) {
+      const api = function () { p(api, arguments); };
+      const namespace = ar[1];
+      api.q = api.q || [];
+      if (typeof namespace === "string") {
+        cal.ns[namespace] = cal.ns[namespace] || api;
+        p(cal.ns[namespace], ar);
+        p(cal, ["initNamespace", namespace]);
+      } else { p(cal, ar); }
+      return;
+    }
+    p(cal, ar);
+  };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", "fbc-sales-call", { origin: "https://cal.com" });
+
+Cal.ns["fbc-sales-call"]("inline", {
+  elementOrSelector: "#fbc-cal-embed",
+  calLink: "DEIN-CAL-USERNAME/erstgespraech",  // ← HIER ANPASSEN
+  layout: "month_view",
+  config: {
+    theme: "light",
+    "utm_source": "fbcsales.at",
+    "utm_medium": "lead_section",
+    "utm_campaign": "erstgespraech"
+  }
+});
+
+Cal.ns["fbc-sales-call"]("ui", {
+  theme: "light",
+  cssVarsPerTheme: {
+    light: { "cal-brand": "#1A2C42" }
+  },
+  hideEventTypeDetails: false,
+  layout: "month_view"
+});
+</script>
+-->
 </body>
 </html>
