@@ -1124,6 +1124,27 @@
     }
     .fbc-widget-gcal-link:hover { color: var(--accent); }
 
+    /* ====== BOOKING DESC — Termininfo rechte Spalte ====== */
+    .fbc-book-desc {
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .fbc-book-desc-title {
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      font-weight: 600;
+      color: var(--night-text);
+      line-height: 1.3;
+      margin: 0 0 1.5rem;
+    }
+    .fbc-book-desc-p {
+      font-size: 0.95rem; color: var(--night-muted);
+      line-height: 1.7;
+      margin: 0 0 1rem;
+    }
+    .fbc-book-desc-p:last-child { margin-bottom: 0; }
+    @media (max-width: 640px) {
+      .btn-book { width: 100%; justify-content: center; min-height: 44px; }
+    }
+
     /* ====== FOOTER ====== */
     footer {
       background: var(--ink);
@@ -1779,66 +1800,28 @@
         <span class="fbc-cal-quote-author">— IT-Lead, österreichischer Infrastrukturkonzern</span>
 
         <div class="booking-actions" style="margin-top:2rem">
-          <a class="btn-book" href="https://calendar.app.google/diDrZSR46RfhnmPN9" target="_blank" rel="noopener" title="Kostenloses 30-Minuten-Gespräch mit FBC buchen">
-            Termin direkt buchen <span class="arr">→</span>
+          <a class="btn-book js-booking-url" href="https://calendar.app.google/PLATZHALTER" target="_blank" rel="noopener noreferrer" title="Kostenloses 30-Minuten-Gespräch mit FBC buchen">
+            Termin buchen <span class="arr">→</span>
           </a>
-          <span class="booking-quiet">oder schreiben an <a href="mailto:fbk@fb-c.at" style="color:inherit;text-decoration:underline;text-underline-offset:3px">fbk@fb-c.at</a></span>
+          <span class="booking-quiet">oder <a href="mailto:kerem.basak@fbcsales.at" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Termin per E-Mail anfragen</a></span>
         </div>
       </div>
 
-      <!-- RECHTS: CUSTOM CALENDAR WIDGET -->
-      <div>
-        <div class="fbc-widget">
-          <!-- Header: Monat + Navigation -->
-          <div class="fbc-widget-head">
-            <div>
-              <div class="fbc-widget-eyebrow">Erstgespräch · 30 Min · kostenlos</div>
-              <div class="fbc-widget-month" id="fbc-month-label">Mai 2026</div>
-            </div>
-            <div class="fbc-widget-nav">
-              <button id="fbc-prev" aria-label="Vorheriger Monat">&#8249;</button>
-              <button id="fbc-next" aria-label="Nächster Monat">&#8250;</button>
-            </div>
-          </div>
-
-          <!-- Wochentag-Header -->
-          <div class="fbc-widget-body">
-            <div class="fbc-widget-wd">
-              <span>Mo</span><span>Di</span><span>Mi</span><span>Do</span><span>Fr</span>
-              <span class="we">Sa</span><span class="we">So</span>
-            </div>
-            <!-- Tage werden per JS befüllt -->
-            <div class="fbc-widget-days" id="fbc-days"></div>
-          </div>
-
-          <!-- Auswahl-Panel: erscheint nach Klick auf einen Tag -->
-          <div class="fbc-widget-panel" id="fbc-panel">
-            <div class="fbc-panel-date" id="fbc-panel-date">Tag auswählen</div>
-            <a class="fbc-panel-btn" id="fbc-panel-btn"
-               href="https://calendar.app.google/diDrZSR46RfhnmPN9"
-               target="_blank" rel="noopener">
-              Jetzt buchen →
-            </a>
-          </div>
-
-          <!-- Footer: Legende + Link -->
-          <div class="fbc-widget-foot">
-            <div class="fbc-widget-legend">
-              <div class="fbc-legend-item">
-                <div class="fbc-legend-dot a"></div><span>Verfügbar</span>
-              </div>
-              <div class="fbc-legend-item">
-                <div class="fbc-legend-dot n"></div><span>Nicht buchbar</span>
-              </div>
-            </div>
-            <a class="fbc-widget-gcal-link"
-               href="https://calendar.app.google/diDrZSR46RfhnmPN9"
-               target="_blank" rel="noopener">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Alle Zeiten in Google Calendar
-            </a>
-          </div>
-        </div>
+      <!-- RECHTS: TERMININFO -->
+      <div class="fbc-book-desc">
+        <h3 class="fbc-book-desc-title">Erstgespräch — 30 Minuten, kostenfrei und unverbindlich</h3>
+        <p class="fbc-book-desc-p">
+          Wir klären, ob und wie FBC für Ihr Anliegen passt. Schwerpunkte:
+          IT-Personalbereitstellung, Test- und Projektmanagement sowie KI- und
+          Digitalisierungslösungen für Unternehmen und öffentliche Auftraggeber
+          im DACH-Raum.
+        </p>
+        <p class="fbc-book-desc-p">
+          Buchen Sie direkt einen Termin über den Kalender — Sie erhalten unmittelbar
+          eine Bestätigung mit Google-Meet-Link. Falls Sie Microsoft Teams, Telefon
+          oder ein persönliches Treffen in Wien bevorzugen, vermerken Sie das bitte
+          bei der Buchung oder antworten Sie auf die Bestätigungs-Mail.
+        </p>
       </div>
 
     </div>
@@ -1907,80 +1890,15 @@
 
 <script>
 (function () {
-  var BOOKING_URL = 'https://calendar.app.google/diDrZSR46RfhnmPN9';
-  var MONTHS = ['Jänner','Februar','März','April','Mai','Juni',
-                'Juli','August','September','Oktober','November','Dezember'];
+  /* ─── BUCHUNGSLINK ─────────────────────────────────────────────────────────────────────
+     Hier die finale URL nach Anlage des Google Appointment Schedules eintragen.
+     Alle Buchungs-Buttons (.js-booking-url) werden automatisch aktualisiert.
+  ─────────────────────────────────────────────────────────────────────────────────────── */
+  var BOOKING_URL = 'https://calendar.app.google/PLATZHALTER';
 
-  var today = new Date(); today.setHours(0,0,0,0);
-  var cur = new Date(today.getFullYear(), today.getMonth(), 1);
-
-  function render() {
-    var y = cur.getFullYear(), m = cur.getMonth();
-    document.getElementById('fbc-month-label').textContent = MONTHS[m] + ' ' + y;
-
-    var firstDow = new Date(y, m, 1).getDay(); // 0=Sun
-    var startOffset = (firstDow === 0) ? 6 : firstDow - 1; // Monday-first
-    var daysInMonth = new Date(y, m + 1, 0).getDate();
-    var container = document.getElementById('fbc-days');
-    container.innerHTML = '';
-
-    for (var i = 0; i < startOffset; i++) {
-      var blank = document.createElement('div');
-      blank.className = 'fbc-day';
-      container.appendChild(blank);
-    }
-
-    for (var d = 1; d <= daysInMonth; d++) {
-      var date = new Date(y, m, d);
-      var dow = date.getDay();
-      var isWeekend = (dow === 0 || dow === 6);
-      var isPast = date < today;
-      var isToday = date.getTime() === today.getTime();
-
-      var el = document.createElement('div');
-      el.textContent = d;
-      el.className = 'fbc-day';
-
-      if (!isPast && !isWeekend) {
-        el.classList.add('avail');
-        (function (el, date, d, m, y) {
-          el.addEventListener('click', function () {
-            document.querySelectorAll('.fbc-day.selected')
-              .forEach(function (x) { x.classList.remove('selected'); });
-            el.classList.add('selected');
-
-            var label = d + '. ' + MONTHS[m] + ' ' + y;
-            document.getElementById('fbc-panel-date').textContent = label + ' — Termin buchen';
-            var panel = document.getElementById('fbc-panel');
-            panel.classList.add('show');
-            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          });
-        })(el, date, d, m, y);
-      }
-
-      if (isToday) el.classList.add('today');
-      container.appendChild(el);
-    }
-
-    var panel = document.getElementById('fbc-panel');
-    panel.classList.remove('show');
-    document.querySelectorAll('.fbc-day.selected')
-      .forEach(function (x) { x.classList.remove('selected'); });
-  }
-
-  document.getElementById('fbc-prev').addEventListener('click', function () {
-    cur.setMonth(cur.getMonth() - 1);
-    if (cur < new Date(today.getFullYear(), today.getMonth(), 1)) {
-      cur = new Date(today.getFullYear(), today.getMonth(), 1);
-    }
-    render();
+  document.querySelectorAll('.js-booking-url').forEach(function (el) {
+    el.href = BOOKING_URL;
   });
-  document.getElementById('fbc-next').addEventListener('click', function () {
-    cur.setMonth(cur.getMonth() + 1);
-    render();
-  });
-
-  render();
 })();
 </script>
 
